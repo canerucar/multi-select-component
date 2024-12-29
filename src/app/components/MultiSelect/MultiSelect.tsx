@@ -29,8 +29,9 @@ export default function MultiSelect({
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.key === 'a') {
-        e.preventDefault()
-        onChange(options)
+        e.preventDefault();
+        onChange(options);
+        setIsOpen(false);
       }
     }
 
